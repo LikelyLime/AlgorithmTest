@@ -1,16 +1,27 @@
 package algorithm;
 
+import java.io.*;
 import java.util.Scanner;
 
-
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
-        System.out.println("|\\_/|");
-        System.out.println("|q p|   /}");
-        System.out.println("( 0 )\"\"\"\\");
-        System.out.println("|\"^\"`    |");
-        System.out.println("||_/=\\\\__|");
+        Scanner sc = new Scanner(System.in);
+        int w = sc.nextInt();
+        int h = sc.nextInt();
+        int p = sc.nextInt();
+        int q = sc.nextInt();
+        int time = sc.nextInt();
+        int currentX = (p + time) % (2 * w);
+        int currentY = (q + time) % (2 * h);
+        if (currentX > w){
+            currentX = 2 * w - currentX;
+        }
+        if(currentY > h){
+            currentY = 2 * h - currentY;
+        }
+
+        System.out.println(currentX + " " + currentY);
 
     }
 }
