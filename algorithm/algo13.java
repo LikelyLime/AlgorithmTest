@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.io.*;
 
-public class Main {
-    public static void main(String[] args){
+public class algo13 {
+    public static void main1(String[] args){
 
         Scanner sc = new Scanner(System.in);
         int cnt = sc.nextInt();
