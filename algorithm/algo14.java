@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.io.*;
 
-public class Main {
+public class algo14 {
     public static void main1(String[] args){
 
         Scanner sc = new Scanner(System.in);
