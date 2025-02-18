@@ -4,57 +4,24 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-    static class Pepole{
-        int age;
-        String name;
-        public Pepole(int age, String name){
-            this.age = age;
-            this.name = name;
-        }
-    }
-    //2번째 방법
-    static class Member implements Comparable<Member>{
-        int age;
-        String name;
-        int idx;
-        Member(int age, String name, int idx){
-            this.age = age;
-            this.name = name;
-            this.idx = idx;
-        }
-
-        @Override
-        public int compareTo(Member o) {
-            if(age != o.age){
-                return  age - o.age;
-            }
-            return idx - o.idx;
-        }
-    }
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        Pepole[] members = new Pepole[N];
+        Set<String> entered = new TreeSet<>();
         for(int i = 0; i < N; i++){
-            Pepole member = new Pepole(sc.nextInt(), sc.next());
-            members[i] = member;
-        }
-
-        Arrays.sort(members, new Comparator<Pepole>() {
-            @Override
-            public int compare(Pepole o1, Pepole o2) {
-                if(o1.age == o2.age){
-                    return 0;
-                }
-                return o1.age - o2.age;
+            String name = sc.next();
+            String status = sc.next();
+            if(status.equals("enter")){
+                entered.add(name);
+            }else{
+                entered.remove(name);
             }
-        });
-
-        for(int i = 0; i < N; i++){
-            System.out.println(members[i].age + " " + members[i].name);
         }
-
+        String[] ans = entered.toArray(new String[entered.size()]);
+        for(int i = ans.length - 1; i >= 0; i--){
+            System.out.println(ans[i]);
+        }
     }
 }
 
