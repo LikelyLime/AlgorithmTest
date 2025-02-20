@@ -8,20 +8,26 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        Set<String> entered = new TreeSet<>();
+        String[] ary = new String[N];
         for(int i = 0; i < N; i++){
-            String name = sc.next();
-            String status = sc.next();
-            if(status.equals("enter")){
-                entered.add(name);
-            }else{
-                entered.remove(name);
+            ary[i] = sc.next();
+        }
+        Arrays.sort(ary);
+
+        String word = ary[0];
+        int maxNum = 1;
+        int curNum = 1;
+        for(int i = 1; i < N; i++){
+            if(!ary[i].equals(ary[ i - 1 ])){
+                curNum = 0;
+            }
+            curNum++;
+            if(curNum > maxNum || (curNum == maxNum && ary[i].compareTo(word) < 0)){
+                word = ary[i];
+                maxNum = curNum;
             }
         }
-        String[] ans = entered.toArray(new String[entered.size()]);
-        for(int i = ans.length - 1; i >= 0; i--){
-            System.out.println(ans[i]);
-        }
+        System.out.println(word);
     }
 }
 

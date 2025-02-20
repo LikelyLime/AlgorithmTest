@@ -1,5 +1,10 @@
-4
-Baha enter
-Askar enter
-Baha leave
-Artem enter
+9
+table
+chair
+table
+table
+lamp
+door
+lamp
+table
+chair
