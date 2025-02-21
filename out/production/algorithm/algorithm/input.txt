@@ -1,10 +1,2 @@
-9
-table
-chair
-table
-table
-lamp
-door
-lamp
-table
-chair
+6
+1000 999 1000 999 1000 999
