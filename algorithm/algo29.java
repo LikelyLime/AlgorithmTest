@@ -1,10 +1,12 @@
 package algorithm;
 
-import java.util.*;
-import java.io.*;
-import java.util.Arrays.*;
-public class Main {
-    public static void main(String[] args) throws IOException {
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.util.Scanner;
+
+public class algo29 {
+    public static void main1(String[] args) throws IOException {
 
         Scanner sc = new Scanner(System.in);
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -38,4 +40,3 @@ public class Main {
         bw.flush();
     }
 }
-
