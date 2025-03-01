@@ -7,35 +7,29 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         Scanner sc = new Scanner(System.in);
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        int arrN = sc.nextInt();
-        int questN = sc.nextInt();
-        int[][] arr = new int[arrN + 1][arrN + 1];
-        for (int i = 1; i <= arrN; i++) {
-            for (int j = 1; j <= arrN; j++) {
-                arr[i][j] = sc.nextInt();
-            }
-
-        }
-        //누적합 배열 생성
-        int [][] acc = new int[arrN + 1][arrN + 1];
-        for (int i = 1; i <= arrN; i++) {
-            for (int j = 1; j <= arrN; j++) {
-                acc[i][j] = acc[i - 1][j] + acc[i][j - 1] - acc[i - 1][j - 1] + arr[i][j];
-
-            }
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+        int[] arr = new int[N + 1];
+        for (int i = 1; i <= N; i++) {
+            arr[i] = sc.nextInt();
         }
 
-
-
-        while(questN-- > 0) {
-            int x1 = sc.nextInt();
-            int y1 = sc.nextInt();
-            int x2 = sc.nextInt();
-            int y2 = sc.nextInt();
-            bw.write(acc[x2][y2] - acc[x1 - 1][y2] - acc[x2][y1 - 1] + acc[x1 - 1][y1 - 1] + "\n");
+        int[] delta = new int[N + 2];
+        while(M-- > 0){
+            int start = sc.nextInt();
+            int end = sc.nextInt();
+            int count = sc.nextInt();
+            delta[start] += count;
+            delta[end + 1] -= count;
         }
-        bw.flush();
+        int[] accDelta = new int[N + 1];
+        for (int i = 1; i <= N; i++) {
+            accDelta[i] =  accDelta[i - 1] + delta[i];
+        }
+        for (int i = 1; i <= N; i++) {
+            System.out.print(arr[i] + accDelta[i] + " ");
+        }
+
     }
 }
 
