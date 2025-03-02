@@ -1,9 +1,10 @@
 package algorithm;
 
-import java.util.*;
-import java.io.*;
-import java.util.Arrays.*;
-public class Main {
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class algo36 {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
@@ -53,4 +54,3 @@ public class Main {
         return lowerBoundIndex;
     }
 }
-
