@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class algo36 {
-    public static void main(String[] args) throws IOException {
+    public static void main1(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int[] cards = new int[N];

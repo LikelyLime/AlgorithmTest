@@ -3,7 +3,7 @@ package algorithm;
 import java.util.Scanner;
 
 public class algo8 {
-    public static void main(String[] args){
+    public static void mai1n(String[] args){
 
         Scanner sc = new Scanner(System.in);
         int caseNum = sc.nextInt();
