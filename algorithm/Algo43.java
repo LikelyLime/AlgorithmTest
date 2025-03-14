@@ -3,8 +3,8 @@ package algorithm;
 import java.util.*;
 import java.io.*;
 import java.util.Arrays.*;
-public class Main {
-    public static void main(String[] args) throws IOException {
+public class Algo43 {
+    public static void main2(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int M = sc.nextInt();
