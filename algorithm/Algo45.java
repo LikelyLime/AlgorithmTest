@@ -3,9 +3,9 @@ package algorithm;
 import java.util.*;
 import java.io.*;
 import java.util.Arrays.*;
-public class Main {
+public class Algo45 {
 
-    public static void main(String[] args) throws IOException {
+    public static void m1ain(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int[] distances = new int[N];
@@ -34,4 +34,3 @@ public class Main {
 
 
 }
-
