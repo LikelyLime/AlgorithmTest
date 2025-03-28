@@ -1,10 +1,12 @@
 package algorithm;
 
-import java.util.*;
-import java.io.*;
-import java.util.Arrays.*;
-public class Main {
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.util.Arrays;
+import java.util.Scanner;
 
+public class Algo46 {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         int A = sc.nextInt();
@@ -55,4 +57,3 @@ public class Main {
         bw.close();
     }
 }
-
