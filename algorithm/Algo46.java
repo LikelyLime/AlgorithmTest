@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Algo46 {
-    public static void main(String[] args) throws IOException {
+    public static void mai1n(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         int A = sc.nextInt();
         int B = sc.nextInt();

@@ -1,11 +1,12 @@
 package algorithm;
 
+
 import java.util.*;
 import java.io.*;
 import java.util.Arrays.*;
-public class Main {
+public class Algo47 {
 
-    public static void main(String[] args) throws IOException {
+    public static void m2ain(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         while(T-- > 0){
@@ -41,4 +42,3 @@ public class Main {
         return true;
     }
 }
-
